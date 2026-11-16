@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Positioning Demo</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 { color: #263b5e; }
+
+        section {
+            min-height: 450px;
+            padding: 30px 15px;
+            margin-bottom: 30px;
+        }
+
+        .static-box {
+            background: #aed6f1;
+            padding: 20px;
+            margin: 20px;
+        }
+
+        .relative-box {
+            position: relative;
+            left: 20px;
+            background: #abebc6;
+            padding: 20px;
+            margin: 20px;
+        }
+
+        .container {
+            position: relative;
+            background: white;
+            height: 200px;
+            margin: 30px;
+            border: 2px solid #3498db;
+            border-radius: 10px;
+        }
+
+        .absolute-box {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: #f5b7b1;
+            padding: 15px;
+        }
+
+        .sticky-box {
+            position: sticky;
+            top: 0;
+            background: #f9e79f;
+            padding: 15px;
+            z-index: 5;
+        }
+
+        .quadrant {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            max-width: 650px;
+            margin: 50px auto;
+        }
+
+        .box {
+            padding: 65px 20px;
+            border-radius: 12px;
+            color: white;
+            font-size: 22px;
+        }
+
+        .one { background: #3498db; }
+        .two { background: #e67e22; }
+        .three { background: #27ae60; }
+        .four { background: #8e44ad; }
+
+        .overlap {
+            position: relative;
+            height: 200px;
+            margin: 40px;
+        }
+
+        .back {
+            position: absolute;
+            background: #e74c3c;
+            padding: 30px;
+            left: 30%;
+            z-index: 1;
+        }
+
+        .front {
+            position: absolute;
+            background: #3498db;
+            color: white;
+            padding: 30px;
+            left: 45%;
+            top: 50px;
+            z-index: 2;
+        }
+
+        .extra {
+            background: white;
+            padding: 50px;
+            margin: 40px auto;
+            max-width: 600px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px #ccc;
+        }
+
+        .fixed-box {
+            position: fixed;
+            bottom: 15px;
+            right: 15px;
+            background: #8e44ad;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        @media (max-width: 600px) {
+            .quadrant {
+                grid-template-columns: 1fr;
+            }
+
+            .relative-box {
+                left: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Positioning Methods</h1>
+    <p>Scroll down to explore all positioning examples.</p>
+
+    <div class="sticky-box">
+        Sticky Position Example
+    </div>
+
+    <section>
+        <h2>1. Static Position</h2>
+        <div class="static-box">Static Position</div>
+        <p>Static is the default positioning method.</p>
+    </section>
+
+    <section>
+        <h2>2. Relative Position</h2>
+        <div class="relative-box">Relative Position</div>
+        <p>Relative positioning moves an element from its normal position.</p>
+    </section>
+
+    <section>
+        <h2>3. Absolute Position</h2>
+        <div class="container">
+            Relative Parent Container
+            <div class="absolute-box">Absolute Position</div>
+        </div>
+        <p>Absolute positioning places an element relative to its positioned parent.</p>
+    </section>
+
+    <section>
+        <h2>4. Centered Responsive Quadrant Layout</h2>
+        <div class="quadrant">
+            <div class="box one">Quadrant 1</div>
+            <div class="box two">Quadrant 2</div>
+            <div class="box three">Quadrant 3</div>
+            <div class="box four">Quadrant 4</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>5. Z-Index Example</h2>
+        <div class="overlap">
+            <div class="back">Behind</div>
+            <div class="front">In Front</div>
+        </div>
+        <p>Z-index controls which element appears on top.</p>
+    </section>
+
+    <section>
+        <h2>6. More CSS Positioning</h2>
+        <div class="extra">
+            <h2>Positioning in Web Design</h2>
+            <p>CSS positioning helps arrange elements on a webpage.</p>
+            <p>It makes websites organized, attractive and user-friendly.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>7. Responsive Design</h2>
+        <div class="extra">
+            <h2>Mobile Friendly Layout</h2>
+            <p>The webpage automatically adjusts to different screen sizes.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>8. Thank You!</h2>
+        <div class="extra">
+            <h2>End of the Page</h2>
+            <p>You have successfully explored CSS positioning methods!</p>
+        </div>
+    </section>
+
+    <div class="fixed-box">
+        Fixed Position
+    </div>
+
+</body>
+</html>
